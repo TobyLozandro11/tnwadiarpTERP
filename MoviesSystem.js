@@ -87,5 +87,7 @@ app.get("/getSummary", (req, res) => {
 });
 
 
-app.listen(portNumber);
-console.log(`main URL http://localhost:${portNumber}/`);
+const PORT = process.env.PORT || 7003;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
